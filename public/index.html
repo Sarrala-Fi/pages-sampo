@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <title>SS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" href="/favicon.ico"/>
+        <style>
+            body {
+                background: #2B2724;
+                height: auto;
+                min-height: 100%;
+                overflow: hidden;
+            }
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #fi {
+                width:50px;
+                height:50px;
+                margin:0 auto;
+                position:relative;
+                left:50%;
+                top:50%;
+                margin-left:-20px;
+                margin-top:-20px;
+            }
+            *, *:before, *:after {
+                box-sizing: border-box;
+                position: relative;
+            }
+            img {
+                max-width: 100%;
+                opacity: 0;
+                transform-origin: top center;
+                transform-style: preserve-3d;
+
+                animation: inherit;
+                animation-name: entry;
+
+                display: block;
+                transform-style: preserve-3d;
+                animation: entry-ss 2.5s;
+            }
+            @keyframes entry-ss {
+                0% { opacity: 0; transform: translateZ(0vh) rotateY(-900deg) translateY(2vh); }
+                80% { opacity: 1; transform: translateZ(0vh) rotateY(0deg) translateY(0vh); }
+                100% { opacity: 0; transform: translateZ(0vh) rotateX(-90deg) translateY(8vh); }
+            }
+            h1 {
+                width: 100%;
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                opacity: 0;
+                display: block;
+                transform-style: preserve-3d;
+                animation: complete-ss 0.2s;
+                animation-delay: 2.3s;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
+            }
+            @keyframes complete-ss {
+                0% { opacity: 0; transform: translateZ(0vh) rotateY(0deg) translateY(-42vh); }
+                100% { opacity: 1; transform: translateZ(0vh) rotateY(0deg) translateY(0vh); }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>This Content Is Not Available In Your Country</h1>
+        <img id="fi" src="favicon.ico"/>
+    </body>
+</html>
